@@ -37,7 +37,7 @@ fn get_targets(data: &Vec<Vec<f32>>, target_index: usize) -> Array1<usize> {
 
 // main function that reads the csv file, trains the model, and prints the predictions, targets and accuracy
 fn main() {
-    let (train, test) = read_csv("src/Diabetespred.csv").split_with_ratio(0.9);
+    let (train, test) = read_csv("src/winequality-red.csv").split_with_ratio(0.9);
     // Fit the tree
     let model = DecisionTree::params().fit(&train).unwrap();
     // Get accuracy on training set
